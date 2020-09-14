@@ -1,2 +1,2 @@
 # ChatBasic
-Feito em Html/Css e socket.io
+Basicao feito em Html/Css e socket.io
