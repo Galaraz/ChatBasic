@@ -19,13 +19,14 @@ let messages = [];
 
 io.on('connection', socket => {
 
-console.log(`Socket conectado: ${socket.id}`);
+console.log(`Socket conectado: ${socket.id} ` );
 
 socket.emit('previousMessages',messages);
 
 socket.on('sendMessage', data =>{
   messages.push(data);
-  socket.broadcast.emit('receiveMessage',data);
+  console.log("enviou de certo",data);
+  socket.broadcast.emit('receivedMessage',data);
 
 });
 

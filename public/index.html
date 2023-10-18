@@ -9,7 +9,7 @@
 
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/2.0.4/socket.io.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/3.0.4/socket.io.js"></script>
 
 
   <link rel="stylesheet" href="styles.css">
@@ -38,7 +38,7 @@
       $('.messages').append('<div class="message"><strong>' + message.author + '</strong>:  ' + message.message + '</div>');
     }
 
-    socket.on('previousMessages',function(message){
+    socket.on('previousMessages',function(messages){
 
 
       for (message of messages){
